@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+
+/* Global Styles */
+body {
+    font-family: "Cute Font", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:"wall.png";
+    color: #333;
+    text-align: center;
+}
+
+/* Header Navigation */
+header {
+    background: #87CEEB;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    margin-top: 50px;
+}
+
+h1, h2 {
+    color: #4682B4;
+}
+
+/* Home Section */
+#home video {
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Blinking Effect */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
+/* Fun Facts */
+.fun-fact {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.fun-fact p {
+    background: #FFD700;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Hobbies Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #4682B4;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}

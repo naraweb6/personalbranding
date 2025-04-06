@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+
+/* ===== Global Styles ===== */
+.logo-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 400px;
+    border: 2px solid #f4cce2;
+}
+
+.logo2-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+    border: 2px solid #f4cce2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Cute Font", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4682B4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('wall.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ===== Header Navigation ===== */
+header {
+    background: rgba(135, 206, 235, 0.9);
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 30px;
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* ===== My Acts Section ===== */
+#my-acts {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.my-acts-bg {
+    max-width: 1000px;
+    margin: 80px auto 0 auto;
+	padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.8); /* Warna background lebih soft */
+    border-radius: 20px;
+    width: 80%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.acts-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: -30px;
+    color: #4682B4;
+    font-family: 'Cute Font', cursive;
+    opacity: 100;
+    transform: translateY(-30px);
+    animation: slideFade 1.2s ease-out forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.acts-subtitle {
+    font-size: 25px;
+    font-style: italic;
+    color: #FFD700;
+    font-family: 'Cute Font', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Activity Section ===== */
+.activity {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;
+    color: #333;
+}
+
+.activity:hover {
+    background-color: #FFEA95;
+    color: #333; /* Pastikan kontras tetap oke */
+}
+
+.activity:hover h3,
+.activity:hover p {
+    color: #333; /* Ubah jika heading/paragraf ingin menyesuaikan juga */
+}
+
+
+/* ===== Image Styling ===== */
+.activity img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ===== Text Description ===== */
+.description {
+    text-align: left;
+    max-width: 600px;
+}
+
+.description h3 {
+    margin-bottom: 10px;
+    color: #4682B4;
+    font-size: 25px;
+	
+}
+
+.description p {
+    font-size: 22px;
+    color: black;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    #its-me img {
+        width: 90%;
+    }
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    color: #333;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: rgba(135, 206, 235, 0.9);
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+/* ===== Responsive for Tablets and Phones ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .logo-img,
+    .logo2-img {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .acts-title {
+        font-size: 40px;
+    }
+
+    .acts-subtitle {
+        font-size: 20px;
+    }
+
+    .activity {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .activity img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .description {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .description h3 {
+        font-size: 22px;
+    }
+
+    .description p {
+        font-size: 18px;
+    }
+
+    .my-acts-bg {
+        padding: 40px 10px;
+        width: 95%;
+    }
+
+    section {
+        width: 95%;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+/* ===== Extra small screens (max-width: 480px) ===== */
+@media (max-width: 480px) {
+    .acts-title {
+        font-size: 32px;
+    }
+
+    .acts-subtitle {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .description p {
+        font-size: 16px;
+    }
+
+    .activity img {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,377 @@
+@charset "utf-8";
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+
+/* Global Styles */
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 400px;
+    border: 2px solid #f4cce2;
+}
+
+.logo2-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+    border: 2px solid #f4cce2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Cute Font", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4682B4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('wall.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header Navigation */
+header {
+    background: rgba(135, 206, 235, 0.9); /* Transparan Sky Blue */
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+nav {
+    display: flex;
+    align-items: center;       /* Vertikal sejajar */
+    justify-content: flex-start;
+    padding: 0 30px;
+}
+
+
+
+/* Judul Umum */
+.fav-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #4682B4;
+    font-family: 'Cute Font', cursive;
+    opacity: 100;
+    transform: translateY(-30px);
+    animation: slideFade 1.2s ease-out forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#fav-song {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.9); /* Warna background lebih soft */
+    border-radius: 20px;
+    width: 80%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	
+}
+
+/* Styling untuk gambar musik */
+#fav-song img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    border: 5px solid #4682B4;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi saat hover */
+#fav-song img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Button menuju playlist Spotify */
+.spotify-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: #4682B4;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.spotify-btn:hover {
+    background-color: #FFD700;
+    color: #333;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    #fav-song img {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #its-me img {
+        width: 90%;
+    }
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    color: #333;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: rgba(135, 206, 235, 0.9);
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+/* ===== Responsive Design for Phones & Tablets ===== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Biar konten tidak ketutupan header */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        display: block;
+        padding: 8px 0;
+    }
+
+    .logo-img, .logo2-img {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .fav-title {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    #fav-song {
+        width: 95%;
+        padding: 40px 15px;
+    }
+
+    #fav-song img {
+        width: 180px;
+        height: 180px;
+        border-radius: 30px;
+    }
+
+    .spotify-btn {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+/* ===== Extra small screen (max-width: 480px) ===== */
+@media (max-width: 480px) {
+    .fav-title {
+        font-size: 32px;
+    }
+
+    #fav-song img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .spotify-btn {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
+/* ===== Responsive Design for Phones & Tablets ===== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Biar konten tidak ketutupan header */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        display: block;
+        padding: 8px 0;
+    }
+
+    .logo-img, .logo2-img {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .fav-title {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    #fav-song {
+        width: 95%;
+        padding: 40px 15px;
+    }
+
+    #fav-song img {
+        width: 180px;
+        height: 180px;
+        border-radius: 30px;
+    }
+
+    .spotify-btn {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+/* ===== Extra small screen (max-width: 480px) ===== */
+@media (max-width: 480px) {
+    .fav-title {
+        font-size: 32px;
+    }
+
+    #fav-song img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .spotify-btn {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
